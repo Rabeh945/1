@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+       button{
+           margin-left: 40%;
+       }
+        
+    </style>
+</head>
+<body>
+    <?php
+    $num=$_GET['num'];
+    ?>
+    <form method="GET" action="EXO2.PHP">
+        <table border="1">
+            <tr>
+                <td>
+                 Entrer un nombre
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter Number ..." name="num"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="flex" >
+                    <button type="submit" s>Calculate</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+            
+            <td>
+                <?php
+                for($i=1;$i<=$num;$i++){
+                    $result=$num*$i;
+                    echo $num, "*".$i,"=".$result,"<br>"; 
+                }       
+                ?>
+            </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
