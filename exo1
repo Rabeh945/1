@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form action="EXO1.PHP" method="POST">
+        <table>
+            <tr>
+                <td>
+                    nomber 1:
+                </td>
+                <td>
+                    <input type="text" name="nomber1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    nomber 1:
+                </td>
+                <td>
+                    <input type="text" name="nomber2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    operation:
+                </td>
+                <td>
+                    <input type="radio" name="method" value="+"> addition (+)<br>
+                    <input type="radio" name="method" value="-"> substraction (-)<br>
+                    <input type="radio" name="method" value="*"> multiplication (*)<br>
+                    <input type="radio" name="method" value="/"> division (/)<br>
+                </td>
+            </tr>
+            </table>
+            <div>
+            <input class="calculer" type="submit" value="calculer" name="calculer" > 
+            </div>
+
+             
+        <style>
+            td{
+                border: 1px solid black;
+            }
+            form{
+                border: 1px solid black;
+                width: 257px;
+            }
+            .calculer{
+                margin-left: 85px;
+                margin: 3px;
+                align-items: middle;
+                
+            }
+            div{
+               display: flex;
+               justify-content: center;
+            }
+        </style>
+
+    </form>
+    <?php
+    
+    $nomber1 =$_POST["nomber1"];
+    $nomber2 =$_POST["nomber2"];
+    
+    if ($_POST['method']== '+'){
+        $result=$nomber1+$nomber2;
+    }
+    else if($_POST['method']=='-'){
+        $result=$nomber1-$nomber2;
+    }
+    else if($_POST['method']=='*'){
+        $result=$nomber1+$nomber2;
+    }
+    else if ($_post['method']=='/'){
+        $result=$nomber1/$nomber2;
+    }
+    
+    echo "<br><br>result is :".$result;
+    ?>
+    
+</body>
+</html>
