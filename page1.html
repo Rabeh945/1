@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .l2{
+        color: red;
+    }
+
+    </style>
+
+</head>
+<body>
+    <h1>
+        Clculer moyenne : <span class="l2">Licence 2</span>
+    </h1>
+    <form action="calculer.php" method="GET">
+        <table>
+        <tr>
+                <td>
+                    moyenne semestre 1 :
+                </td>
+                <td>
+                    <input type="text" name="moy1" placeholder="Moyenne Semester 2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    moyenne semestre 2 :
+                </td>
+                <td>
+                    <input type="text" name="moy2" placeholder="Moyenne Semester 2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Session :
+                </td>
+                <td>
+                    <select name="session">
+                        <option value="avant">Avant Rattrapage</option>
+                        <option value="apres">Apres Rattrapage</option>
+                    </select>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2">
+                <center><input type="submit" value="Calculer Moyenne"></center>
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+    
+</body>
+</html>
